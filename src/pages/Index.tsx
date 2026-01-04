@@ -11,15 +11,20 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>LoveBilda O'quv Markazi - Sifatli ta'lim, yorqin kelajak</title>
+        <title>EdulabAI - Sun'iy intellekt orqali online ta'lim</title>
         <meta
           name="description"
-          content="LoveBilda o'quv markazi - Ingliz tili, Matematika, IT va Maktabga tayyorlov kurslari. Professional ustozlar, zamonaviy metodlar va kafolatlangan natija."
+          content="EdulabAI o'quv platformasi - barcha darslar sun'iy intellekt tomonidan o'qitiladi. Kelajak texnologiyalarini bugun o'rganing."
         />
         <meta
           name="keywords"
-          content="o'quv markazi, ingliz tili kurslari, matematika, IT kurslari, maktabga tayyorlov, Toshkent"
+          content="EdulabAI, ai ta'lim, sun'iy intellekt kurslari, prompt engineering, machine learning online"
         />
+        <meta property="og:title" content="EdulabAI - Sun'iy intellekt orqali online ta'lim" />
+        <meta property="og:description" content="O'zbekistondagi birinchi AI mentorlar tomonidan o'qitiladigan online platforma." />
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:url" content="https://edulabai.uz" />
+        <link rel="canonical" href="https://edulabai.uz" />
       </Helmet>
 
       <Header />

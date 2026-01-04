@@ -5,50 +5,43 @@ import { Target, Eye, Heart, Award, Users, BookOpen } from "lucide-react";
 
 const team = [
   {
-    name: "Nodira Karimova",
-    role: "Ingliz tili ustozasi",
-    experience: "12 yillik tajriba",
-    avatar: "👩‍🏫",
-    bio: "IELTS 8.5, Cambridge sertifikati. 500+ o'quvchiga ta'lim bergan.",
+    name: "GPT-4o",
+    role: "Bosh Mentor",
+    experience: "Keng qamrovli bilim",
+    avatar: "🤖",
+    bio: "Dunyodagi eng ilg'or til modeli. Barcha sohalarda mukammal bilimga ega.",
   },
   {
-    name: "Jahongir Saidov",
-    role: "Matematika ustozasi",
-    experience: "15 yillik tajriba",
-    avatar: "👨‍🏫",
-    bio: "Olimpiada g'oliblari tayyorlagan. DTM mutaxassisi.",
+    name: "Claude 3.5 Sonnet",
+    role: "Ijodiy Mentor",
+    experience: "Yuqori mantiq",
+    avatar: "🧠",
+    bio: "Murakkab muammolarni yechish va kod yozishda mutaxassis AI.",
   },
   {
-    name: "Aziza Rahimova",
-    role: "IT o'qituvchisi",
-    experience: "8 yillik tajriba",
-    avatar: "👩‍💻",
-    bio: "Full-stack developer. Google sertifikatlangan o'qituvchi.",
-  },
-  {
-    name: "Dilshod Umarov",
-    role: "Maktabga tayyorlov",
-    experience: "10 yillik tajriba",
-    avatar: "👨‍🎓",
-    bio: "Bolalar psixologiyasi mutaxassisi. Montessori metodikasi.",
-  },
+    name: "Midjourney",
+    role: "Dizayn Mentori",
+    experience: "Cheksiz tasavvur",
+    avatar: "🎨",
+    bio: "Tasvirlar yaratish va vizual san'at bo'yicha eng ilg'or AI.",
+  }
 ];
 
 const values = [
   {
     icon: Target,
-    title: "Maqsad",
-    description: "Har bir bolaning imkoniyatlarini ro'yobga chiqarish va ularni kelajakka tayyorlash.",
+    title: "Innovatsiya",
+    description: "Eng so'nggi AI texnologiyalarini ta'limga tatbiq etish.",
   },
   {
     icon: Eye,
-    title: "Qadriyatlar",
-    description: "Halollik, professionallik va har bir o'quvchiga individual yondashuv.",
+    title: "Kelajak",
+    description: "Sizni kelajak kasblariga tayyorlash va AI bilan ishlashni o'rgatish.",
   },
   {
     icon: Heart,
     title: "Missiya",
-    description: "Sifatli ta'limni hamma uchun ochiq qilish va jamiyat rivojiga hissa qo'shish.",
+    description: "Ta'limni AI yordamida tezkor, samarali va qiziqarli qilish.",
   },
 ];
 
@@ -56,10 +49,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>Biz haqimizda - LoveBilda O'quv Markazi</title>
+        <title>Biz haqimizda - EdulabAI</title>
         <meta
           name="description"
-          content="LoveBilda o'quv markazi haqida - bizning jamoamiz, missiyamiz va qadriyatlarimiz. 15+ tajribali ustozlar va 500+ mamnun o'quvchilar."
+          content="EdulabAI - dunyodagi birinchi to'liq sun'iy intellekt tomonidan boshqariladigan ta'lim platformasi."
         />
       </Helmet>
 
@@ -74,7 +67,7 @@ const About = () => {
                 Biz haqimizda
               </h1>
               <p className="text-xl text-primary-foreground/80">
-                2018 yildan beri minglab o'quvchilarga sifatli ta'lim berib kelmoqdamiz
+                2024 yildan beri ta'lim tizimini sun'iy intellekt yordamida inqilob qilmoqdamiz
               </p>
             </div>
           </div>
@@ -101,20 +94,20 @@ const About = () => {
                   Kelajak avlodni <span className="text-gradient">tayyorlash</span> yo'lida
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  LoveBilda o'quv markazi 2018 yilda tashkil etilgan bo'lib, bugungi kunga qadar 
-                  1000 dan ortiq o'quvchilarga sifatli ta'lim berish sharafiga muyassar bo'ldi.
+                  EdulabAI kelajak ta'limini bugun yaratmoqda. Biz dars berish jarayonini
+                  inson faktoridan xoli qilib, eng ilg'or AI algoritmlariga topshirdik.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Bizning maqsadimiz – har bir bolaning iste'dodini kashf etish va rivojlantirish, 
-                  ularga zamonaviy bilim va ko'nikmalarni berish orqali kelajakka tayyorlash.
+                  Bizning maqsadimiz – har bir o'quvchiga 100% individual yondashadigan, uning qiziqishlari
+                  va o'zlashtirish tezligiga qarab dars o'tadigan AI tizimini taqdim etishdir.
                 </p>
-                
+
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-6 pt-6">
                   {[
-                    { value: "6+", label: "Yillik tajriba" },
-                    { value: "1000+", label: "O'quvchilar" },
-                    { value: "15+", label: "Ustozlar" },
+                    { value: "100%", label: "AI Mentorlar" },
+                    { value: "Online", label: "Ta'lim formati" },
+                    { value: "24/7", label: "Darslar" },
                   ].map((stat, index) => (
                     <div key={index} className="text-center">
                       <p className="text-3xl font-extrabold text-primary">{stat.value}</p>
@@ -130,7 +123,7 @@ const About = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {[
                       { icon: Award, label: "Sifat" },
-                      { icon: Users, label: "Jamoa" },
+                      { icon: Users, label: "AI Jamoa" },
                       { icon: BookOpen, label: "Bilim" },
                       { icon: Heart, label: "Mehr" },
                     ].map((item, index) => (
@@ -185,14 +178,14 @@ const About = () => {
                 Bizning jamoa
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-                <span className="text-gradient">Professional</span> ustozlar
+                <span className="text-gradient">AI Mentorlar</span> jamoasi
               </h2>
               <p className="text-lg text-muted-foreground">
-                Tajribali va sertifikatlangan ustozlar jamoasi
+                Eng ilg'or sun'iy intellekt modellari xizmatingizda
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {team.map((member, index) => (
                 <div
                   key={index}

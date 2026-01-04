@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Send, CheckCircle, Gift, Clock, Users } from "lucide-react";
+import { Send, CheckCircle, Gift, Clock, Users, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const courses = [
-  { id: "english", name: "Ingliz tili" },
-  { id: "math", name: "Matematika" },
-  { id: "it", name: "IT va Dasturlash" },
-  { id: "preschool", name: "Maktabga tayyorlov" },
-  { id: "physics", name: "Fizika" },
-  { id: "chemistry", name: "Kimyo" },
+  { id: "prompt", name: "Prompt Engineering" },
+  { id: "coding", name: "AI Coding & Dev" },
+  { id: "design", name: "AI Design (Midjourney)" },
+  { id: "business", name: "AI for Business" },
+  { id: "ml", name: "Machine Learning Basics" },
 ];
 
 const Register = () => {
@@ -37,7 +37,7 @@ const Register = () => {
 
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     toast({
       title: "Murojaatingiz qabul qilindi!",
       description: "Tez orada siz bilan bog'lanamiz.",
@@ -57,7 +57,7 @@ const Register = () => {
     return (
       <>
         <Helmet>
-          <title>Ro'yxatdan o'tish - LoveBilda O'quv Markazi</title>
+          <title>Ro'yxatdan o'tish - EdulabAI</title>
         </Helmet>
         <Header />
         <main className="min-h-screen flex items-center justify-center bg-muted/30 pt-20">
@@ -73,13 +73,26 @@ const Register = () => {
                 Tez orada administratorimiz siz bilan bog'lanadi va bepul sinov darsiga
                 taklif qiladi.
               </p>
-              <Button
-                variant="default"
-                size="lg"
-                onClick={() => setIsSubmitted(false)}
-              >
-                Yana ro'yxatdan o'tish
-              </Button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link to="/free-lesson">
+                  <Button
+                    variant="cta"
+                    size="lg"
+                    className="w-full sm:w-auto rounded-2xl"
+                  >
+                    <Play className="w-5 h-5 mr-2" />
+                    1-darsni bepul ko'rish
+                  </Button>
+                </Link>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto rounded-2xl"
+                  onClick={() => setIsSubmitted(false)}
+                >
+                  Yana ro'yxatdan o'tish
+                </Button>
+              </div>
             </div>
           </div>
         </main>
@@ -91,10 +104,10 @@ const Register = () => {
   return (
     <>
       <Helmet>
-        <title>Ro'yxatdan o'tish - LoveBilda O'quv Markazi</title>
+        <title>Ro'yxatdan o'tish - EdulabAI</title>
         <meta
           name="description"
-          content="LoveBilda o'quv markaziga ro'yxatdan o'ting. Birinchi dars bepul! Ingliz tili, Matematika, IT va boshqa yo'nalishlar bo'yicha kurslar."
+          content="EdulabAI platformasiga ro'yxatdan o'ting. Birinchi dars bepul! AI Prompt Engineering, Coding va boshqa yo'nalishlar bo'yicha kurslar."
         />
       </Helmet>
 
@@ -215,7 +228,7 @@ const Register = () => {
                   </Button>
 
                   <p className="text-xs text-center text-muted-foreground">
-                    Yuborish tugmasini bosish orqali siz shaxsiy ma'lumotlaringizni 
+                    Yuborish tugmasini bosish orqali siz shaxsiy ma'lumotlaringizni
                     qayta ishlashga rozilik bildirasiz
                   </p>
                 </form>
@@ -228,7 +241,7 @@ const Register = () => {
                     Nima uchun ro'yxatdan o'tish kerak?
                   </h3>
                   <p className="text-muted-foreground mb-8">
-                    Formani to'ldirganingizdan so'ng, administratorimiz 24 soat ichida 
+                    Formani to'ldirganingizdan so'ng, administratorimiz 24 soat ichida
                     siz bilan bog'lanadi va qulay vaqtni belgilaydi.
                   </p>
                 </div>

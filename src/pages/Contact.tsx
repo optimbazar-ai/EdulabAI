@@ -9,10 +9,10 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Aloqa - LoveBilda O'quv Markazi</title>
+        <title>Aloqa - EdulabAI</title>
         <meta
           name="description"
-          content="LoveBilda o'quv markazi bilan bog'laning. Manzil, telefon, Telegram va ish vaqti haqida ma'lumot."
+          content="EdulabAI platformasi bilan bog'laning. Manzil, telefon, Telegram va darslar haqida ma'lumot."
         />
       </Helmet>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                       Telegram
                     </h3>
                     <p className="text-xl font-semibold text-secondary">
-                      @lovebilda_uz
+                      @edulabai_uz
                     </p>
                     <p className="text-sm text-muted-foreground">
                       24/7 xabar yuboring
@@ -169,7 +169,7 @@ const Contact = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="LoveBilda lokatsiyasi"
+                    title="EdulabAI lokatsiyasi"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">

@@ -3,127 +3,127 @@ import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, BookOpen, CheckCircle, ArrowRight } from "lucide-react";
+import { Clock, Users, BookOpen, CheckCircle, ArrowRight, Play } from "lucide-react";
 
 const courses = [
   {
     id: 1,
-    emoji: "🇬🇧",
-    title: "Ingliz tili",
-    subtitle: "Boshlang'ichdan IELTS gacha",
-    description: "Zamonaviy metodikalar va native speakerlar bilan amaliyot. Grammatika, speaking, listening va writing bo'yicha to'liq tayyorlov.",
-    duration: "3-12 oy",
-    students: "8-10",
-    levels: ["Beginner", "Elementary", "Intermediate", "Advanced", "IELTS"],
+    emoji: "🤖",
+    title: "Prompt Engineering",
+    subtitle: "AI bilan muloqot san'ati",
+    description: "ChatGPT, Claude va boshqa AI modellari bilan samarali ishlash, murakkab buyruqlar (prompts) yozish va ishingizni 10 barobar tezlashtirishni o'rganing.",
+    duration: "1 oy",
+    students: "Cheksiz",
+    levels: ["Boshlang'ich", "O'rta", "Professional"],
     features: [
-      "Native speakerlar bilan amaliyot",
-      "Cambridge va Oxford kitoblari",
-      "Online platforma kirish huquqi",
-      "Haftalik speaking club",
-      "Shaxsiy mentor",
+      "Murakkab promptlar yaratish",
+      "AI agentlarni sozlash",
+      "Ish jarayonini avtomatlashtirish",
+      "Amaliy loyihalar to'plami",
+      "Sertifikat",
     ],
-    price: "400,000",
-    schedule: "Dushanba-Juma",
+    price: "250,000",
+    schedule: "Online / Istalgan vaqtda",
     color: "from-blue-500 to-blue-600",
   },
   {
     id: 2,
-    emoji: "📐",
-    title: "Matematika",
-    subtitle: "1-11 sinf va DTM tayyorlash",
-    description: "Maktab dasturi, olimpiada tayyorlovi va DTM tayyorlash. Individual va guruh darslari mavjud.",
-    duration: "4-9 oy",
-    students: "6-8",
-    levels: ["1-4 sinf", "5-8 sinf", "9-11 sinf", "DTM", "Olimpiada"],
+    emoji: "👶",
+    title: "AI Bolajonlar uchun",
+    subtitle: "Kichik yoshdagi AI tadqiqotchilari",
+    description: "Farzandingizga AI yordamida rasm chizish, hikoyalar yozish va mantiqiy fikrlashni o'rgating. Kelajak texnologiyalari bilan tanishuv.",
+    duration: "2 oy",
+    students: "Online",
+    levels: ["5-7 yosh", "8-12 yosh"],
     features: [
-      "Shaxsiy o'quv rejasi",
-      "DTM test materiallari",
-      "Olimpiada tayyorlovi",
-      "Haftalik nazorat testlari",
-      "Ota-onalar uchun hisobot",
+      "AI bilan rasm chizish",
+      "Sehrli ertaklar yaratish",
+      "Mantiqiy o'yinlar",
+      "Xavfsiz AI muhiti",
+      "Ota-onalar uchun nazorat",
     ],
-    price: "350,000",
-    schedule: "Dushanba-Shanba",
-    color: "from-purple-500 to-purple-600",
+    price: "200,000",
+    schedule: "Haftada 3 kun",
+    color: "from-orange-500 to-orange-600",
   },
   {
     id: 3,
-    emoji: "💻",
-    title: "IT va Dasturlash",
-    subtitle: "Web, Mobile va Python",
-    description: "Zamonaviy texnologiyalar va real loyihalar bilan ishlash tajribasi. Portfoilo yaratish imkoniyati.",
-    duration: "6-12 oy",
-    students: "8-10",
-    levels: ["Kompyuter savodxonligi", "Python", "Web Development", "Mobile Apps"],
+    emoji: "🧠",
+    title: "Machine Learning",
+    subtitle: "AI modellarini yaratish",
+    description: "Ma'lumotlar bilan ishlash, algoritmlar va bashorat qiluvchi AI modellarini noldan yaratish darslari. Matematika va Python asoslari.",
+    duration: "6 oy",
+    students: "Online",
+    levels: ["Python asoslari", "Data Science", "Deep Learning"],
     features: [
-      "Real loyihalar ustida ishlash",
-      "GitHub portfoilo",
-      "Hackathon ishtirok etish",
-      "Freelance tayyorlash",
-      "Ishga joylashish yordami",
+      "Python dasturlash tili",
+      "Matematik modellashtirish",
+      "Real ma'lumotlar bilan ishlash",
+      "Kaggle musobaqalari",
+      "Portfolio yaratish",
     ],
     price: "500,000",
+    schedule: "Dushanba-Juma",
+    color: "from-purple-500 to-purple-600",
+  },
+  {
+    id: 4,
+    emoji: "🚀",
+    title: "AI Dasturchi",
+    subtitle: "AI integratsiyalashgan ilovalar",
+    description: "Veb-sayt va mobil ilovalarga AI funksiyalarini (chatbotlar, analizatorlar) qo'shishni o'rganing. API lar bilan ishlash tajribasi.",
+    duration: "4 oy",
+    students: "Online",
+    levels: ["Web Dev", "AI API", "Deployment"],
+    features: [
+      "OpenAI API integratsiyasi",
+      "Chatbotlar yaratish",
+      "Next.js va AI",
+      "Real startap loyihalar",
+      "Ishga joylashish bo'yicha maslahat",
+    ],
+    price: "450,000",
     schedule: "Seshanba-Shanba",
     color: "from-teal-500 to-teal-600",
   },
   {
-    id: 4,
+    id: 5,
     emoji: "🎨",
-    title: "Maktabga tayyorlov",
-    subtitle: "5-7 yosh bolalar uchun",
-    description: "O'qish, yozish, hisoblash va ijtimoiy ko'nikmalar. Bolangizni maktabga tayyor qiling.",
-    duration: "9 oy",
-    students: "6-8",
-    levels: ["5 yosh", "6 yosh", "7 yosh"],
+    title: "AI Dizayn",
+    subtitle: "Vizual san'at va AI",
+    description: "Midjourney, DALL-E va Stable Diffusion orqali professional dizaynlar yaratish, logotiplar va illyustratsiyalar generatsiya qilish.",
+    duration: "2 oy",
+    students: "Online",
+    levels: ["Grafik dizayn", "AI Generatsiyasi", "Post-production"],
     features: [
-      "O'qish va yozish asoslari",
-      "Matematik tafakkur",
-      "Niqtoq motorika",
-      "Ijodiy mashg'ulotlar",
-      "Ijtimoiy ko'nikmalar",
+      "Midjourney sirlari",
+      "Fotorealistik tasvirlar",
+      "Brand identika",
+      "Dizaynni tahrirlash",
+      "Freelance bo'yicha master-klass",
     ],
     price: "300,000",
-    schedule: "Dushanba-Juma",
-    color: "from-orange-500 to-orange-600",
-  },
-  {
-    id: 5,
-    emoji: "🔬",
-    title: "Fizika",
-    subtitle: "7-11 sinf va DTM",
-    description: "Nazariy bilimlar va amaliy tajribalar. Olimpiada va DTM tayyorlash.",
-    duration: "6-9 oy",
-    students: "6-8",
-    levels: ["7-8 sinf", "9-11 sinf", "DTM", "Olimpiada"],
-    features: [
-      "Laboratoriya mashg'ulotlari",
-      "Video darslar",
-      "DTM test materiallari",
-      "Olimpiada tayyorlovi",
-      "Individual yondashuv",
-    ],
-    price: "380,000",
-    schedule: "Dushanba-Shanba",
-    color: "from-indigo-500 to-indigo-600",
+    schedule: "Haftada 2 kun",
+    color: "from-pink-500 to-pink-600",
   },
   {
     id: 6,
-    emoji: "🧪",
-    title: "Kimyo",
-    subtitle: "8-11 sinf va DTM",
-    description: "Organik va anorganik kimyo. Laboratoriya ishlari va DTM tayyorlash.",
-    duration: "6-9 oy",
-    students: "6-8",
-    levels: ["8-9 sinf", "10-11 sinf", "DTM", "Olimpiada"],
+    emoji: "📊",
+    title: "AI Business",
+    subtitle: "Biznesni AI bilan avtomatlashtirish",
+    description: "Kichik va o'rta biznes jarayonlarini AI yordamida optimallashtirish, mijozlar bilan muloqot va hisobotlarni avtomatlashtirish.",
+    duration: "2 oy",
+    students: "Guruh / Individual",
+    levels: ["CRM AI", "Marketologlar uchun AI", "Avtomatizatsiya"],
     features: [
-      "Laboratoriya mashg'ulotlari",
-      "Interaktiv darslar",
-      "DTM test materiallari",
-      "Formulalar to'plami",
-      "Nazorat testlari",
+      "Kontent-plan generatsiyasi",
+      "AI-chatbotlar sozlash",
+      "Ma'lumotlar tahlili",
+      "Zamanaviy marketing",
+      "Amaliy keyslar",
     ],
-    price: "380,000",
-    schedule: "Seshanba-Shanba",
+    price: "400,000",
+    schedule: "Shanba-Yaxshanba",
     color: "from-green-500 to-green-600",
   },
 ];
@@ -132,10 +132,10 @@ const Courses = () => {
   return (
     <>
       <Helmet>
-        <title>Kurslar - LoveBilda O'quv Markazi</title>
+        <title>Kurslar - EdulabAI</title>
         <meta
           name="description"
-          content="LoveBilda o'quv markazi kurslari - Ingliz tili, Matematika, IT, Fizika, Kimyo va Maktabga tayyorlov. Professional ustozlar bilan sifatli ta'lim."
+          content="EdulabAI kurslari - Prompt Engineering, Machine Learning, AI Dasturchi va biznes uchun AI. Kelajak bilimlarini biz bilan o'rganing."
         />
       </Helmet>
 
@@ -146,10 +146,10 @@ const Courses = () => {
           <div className="container-custom relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary-foreground mb-6">
-                Bizning kurslar
+                Bizning AI Kurslar
               </h1>
               <p className="text-xl text-primary-foreground/80">
-                Har bir yosh va daraja uchun maxsus tayyorlangan ta'lim dasturlari
+                Lirik va texnik bilimlarni sun'iy intellekt yordamida yuqori darajada o'rganing
               </p>
             </div>
           </div>
@@ -167,7 +167,7 @@ const Courses = () => {
         <section className="section-padding bg-background">
           <div className="container-custom">
             <div className="grid gap-8">
-              {courses.map((course, index) => (
+              {courses.map((course) => (
                 <div
                   key={course.id}
                   className="bg-card rounded-3xl shadow-card overflow-hidden card-hover"
@@ -233,19 +233,25 @@ const Courses = () => {
 
                     {/* Right - Price & CTA */}
                     <div className="bg-muted/30 p-8 flex flex-col justify-center items-center text-center">
-                      <p className="text-sm text-muted-foreground mb-2">Oylik to'lov</p>
+                      <p className="text-sm text-muted-foreground mb-2">Platforma to'lovi</p>
                       <p className="text-4xl font-extrabold text-primary mb-1">
                         {course.price}
                       </p>
                       <p className="text-muted-foreground mb-6">so'm</p>
                       <Link to="/register" className="w-full">
-                        <Button variant="cta" size="lg" className="w-full group">
-                          Ro'yxatdan o'tish
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <Button variant="cta" size="lg" className="w-full group mb-3">
+                          Kursni boshlash
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform ml-2" />
+                        </Button>
+                      </Link>
+                      <Link to="/free-lesson" className="w-full">
+                        <Button variant="outline" size="lg" className="w-full border-primary/20 hover:bg-primary/5">
+                          <Play className="w-4 h-4 mr-2 text-primary" />
+                          1-darsni bepul ko'rish
                         </Button>
                       </Link>
                       <p className="text-xs text-muted-foreground mt-4">
-                        Birinchi dars BEPUL!
+                        Darslar AI tomonidan o'tiladi
                       </p>
                     </div>
                   </div>

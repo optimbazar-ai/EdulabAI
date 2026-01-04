@@ -3,38 +3,38 @@ import { GraduationCap, Users, Clock, Award, Heart, Lightbulb } from "lucide-rea
 const features = [
   {
     icon: GraduationCap,
-    title: "Tajribali ustozlar",
-    description: "10+ yillik tajribaga ega, sertifikatlangan professional o'qituvchilar.",
+    title: "AI Mentorlar",
+    description: "Darslar dunyodagi eng ilg'or sun'iy intellekt modellari tomonidan o'tiladi.",
     color: "bg-primary",
   },
   {
     icon: Users,
-    title: "Kichik guruhlar",
-    description: "Har bir guruhda 8-10 nafar o'quvchi – shaxsiy yondashuv kafolati.",
+    title: "Shaxsiy yondashuv",
+    description: "AI algoritmi har bir o'quvchining o'zlashtirish tezligiga moslashadi.",
     color: "bg-secondary",
   },
   {
     icon: Clock,
-    title: "Qulay jadval",
-    description: "Ertalabdan kechgacha turli vaqtlarda darslar. O'zingizga mosini tanlang.",
+    title: "24/7 Darslar",
+    description: "Online darslarni o'zingizga qulay vaqtda, istalgan joyda ko'rishingiz mumkin.",
     color: "bg-accent",
   },
   {
     icon: Award,
-    title: "Kafolatlangan natija",
-    description: "O'quvchilarimizning 95% dan ko'prog'i yaxshi natijalarga erishadilar.",
+    title: "Kafolatlangan bilim",
+    description: "AI tomonidan tuzilgan testlar va amaliy topshiriqlar natijani kafolatlaydi.",
     color: "bg-primary",
   },
   {
     icon: Heart,
-    title: "Qulay muhit",
-    description: "Zamonaviy jihozlangan xonalar va do'stona atmosfera.",
+    title: "AI Kurslar",
+    description: "Barcha o'quv materiallari muntazam ravishda AI tomonidan yangilanib boriladi.",
     color: "bg-secondary",
   },
   {
     icon: Lightbulb,
-    title: "Zamonaviy metodlar",
-    description: "Interaktiv darslar, online platformalar va real loyihalar.",
+    title: "AI-generatsiya darslar",
+    description: "Har darsda interaktiv AI vositalari va real AI loyihalar bilan ishlaysiz.",
     color: "bg-accent",
   },
 ];
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
             Bizning <span className="text-gradient">afzalliklarimiz</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            LoveBilda o'quv markazida farzandingiz uchun eng yaxshi ta'lim muhitini yaratdik
+            LoveBilda o'quv markazida AI texnologiyalari yordamida eng zamonaviy bilimlarni egallang
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const FeaturesSection = () => {
             <div
               key={index}
               className="group bg-card rounded-2xl p-8 shadow-card card-hover cursor-pointer"
-              style={{ 
+              style={{
                 animationDelay: `${index * 0.1}s`,
               }}
             >

@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/", label: "Bosh sahifa" },
   { href: "/about", label: "Biz haqimizda" },
   { href: "/courses", label: "Kurslar" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Aloqa" },
 ];
 
@@ -29,22 +30,21 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-card/95 backdrop-blur-lg shadow-card"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-card/95 backdrop-blur-lg shadow-card"
+        : "bg-transparent"
+        }`}
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-hero flex items-center justify-center shadow-soft group-hover:shadow-glow transition-all duration-300">
-              <GraduationCap className="w-7 h-7 text-primary-foreground" />
+          <Link to="/" className="flex items-center gap-4 group">
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-purple-600 shadow-glow transition-all duration-300 group-hover:scale-110">
+              <Brain className="w-7 h-7 text-white" />
             </div>
             <div>
-              <span className="text-xl font-bold text-foreground">LoveBilda</span>
-              <p className="text-xs text-muted-foreground -mt-1">O'quv markazi</p>
+              <span className="text-xl font-bold text-foreground">EdulabAI</span>
+              <p className="text-xs text-muted-foreground -mt-1">AI bilan ta'lim</p>
             </div>
           </Link>
 
@@ -54,11 +54,10 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`font-medium transition-colors duration-300 hover:text-primary ${
-                  location.pathname === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className={`font-medium transition-colors duration-300 hover:text-primary ${location.pathname === link.href
+                  ? "text-primary"
+                  : "text-muted-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -86,20 +85,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-96 pb-6" : "max-h-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 pb-6" : "max-h-0"
+            }`}
         >
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className={`font-medium py-2 transition-colors duration-300 hover:text-primary ${
-                  location.pathname === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className={`font-medium py-2 transition-colors duration-300 hover:text-primary ${location.pathname === link.href
+                  ? "text-primary"
+                  : "text-muted-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
